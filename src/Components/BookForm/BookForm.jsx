@@ -9,7 +9,7 @@ import {
   Box,
 } from "@mui/material";
 
-function App() {
+function BookForm() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -57,8 +57,8 @@ function App() {
     >
       <Box
         sx={{
-          maxWidth: "1240px",
-          width: "70%",
+          maxWidth: "800px",
+          width: "90%",
           color: "white",
           mt: 5,
         }}
@@ -67,7 +67,7 @@ function App() {
           <Typography
             variant="h5"
             sx={{
-              fontWeight: "bold",
+              fontWeight: "400",
               textAlign: "center",
               mb: 2,
             }}
@@ -79,7 +79,7 @@ function App() {
             variant="body1"
             sx={{
               mb: 3,
-              lineHeight: 1.6,
+              lineHeight: 2,
               textAlign: "center",
               px: 2,
             }}
@@ -95,7 +95,9 @@ function App() {
             {/* First Name */}
             <Grid item xs={6}>
               <FormControl fullWidth>
-                <label>First Name *</label>
+                <label style={{ fontSize: "14px" }}>
+                  First Name <span style={{ color: "#f56c6c" }}>*</span>
+                </label>
                 <input
                   type="text"
                   name="firstName"
@@ -105,7 +107,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -115,7 +117,9 @@ function App() {
             {/* Last Name */}
             <Grid item xs={6}>
               <FormControl fullWidth>
-                <label>Last Name *</label>
+                <label style={{ fontSize: "14px" }}>
+                  Last Name <span style={{ color: "#f56c6c" }}>*</span>
+                </label>
                 <input
                   type="text"
                   name="lastName"
@@ -125,7 +129,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -135,7 +139,9 @@ function App() {
             {/* Email */}
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <label>Email *</label>
+                <label style={{ fontSize: "14px" }}>
+                  Email <span style={{ color: "#f56c6c" }}>*</span>
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -145,7 +151,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -155,7 +161,9 @@ function App() {
             {/* Phone */}
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <label>Phone *</label>
+                <label style={{ fontSize: "14px" }}>
+                  Phone<span style={{ color: "#f56c6c" }}>*</span>
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -165,7 +173,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -175,7 +183,9 @@ function App() {
             {/* Event Date */}
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <label>Date of Event *</label>
+                <label style={{ fontSize: "14px" }}>
+                  Date of Event <span style={{ color: "#f56c6c" }}>*</span>
+                </label>
                 <input
                   type="date"
                   name="eventDate"
@@ -185,7 +195,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -195,7 +205,9 @@ function App() {
             {/* Event Time */}
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <label>Time of Event *</label>
+                <label style={{ fontSize: "14px" }}>
+                  Time of Event <span style={{ color: "#f56c6c" }}>*</span>
+                </label>
                 <input
                   type="time"
                   name="eventTime"
@@ -205,7 +217,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -215,7 +227,9 @@ function App() {
             {/* Number of Guests */}
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <label>Number of Guests *</label>
+                <label style={{ fontSize: "14px" }}>
+                  Number of Guests <span style={{ color: "#f56c6c" }}>*</span>
+                </label>
                 <input
                   type="number"
                   name="numGuests"
@@ -225,7 +239,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -236,50 +250,96 @@ function App() {
                 variant="body1"
                 sx={{
                   lineHeight: 1.6,
+                  fontSize: "14px",
                 }}
               >
-                SELECT WHICH ITEMS YOU’D LIKE TO ORDER FOR YOUR EVENT:
+                SELECT WHICH ITEMS YOU’D LIKE TO ORDER FOR YOUR EVENT:{" "}
+                <span style={{ color: "#f56c6c" }}>*</span>
               </Typography>
               <Grid container spacing={2}>
                 {/* First column of checkboxes */}
                 <Grid item xs={6}>
                   <FormControl component="fieldset">
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
-                          value="option1"
-                          checked={formData.checkedItems.includes("option1")}
+                          value="option5"
+                          checked={formData.checkedItems.includes("option5")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="BÁNH CỐM"
                     />
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
-                          value="option2"
-                          checked={formData.checkedItems.includes("option2")}
+                          value="option6"
+                          checked={formData.checkedItems.includes("option6")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="XÔI GẤC"
                     />
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
-                          value="option3"
-                          checked={formData.checkedItems.includes("option3")}
+                          value="option7"
+                          checked={formData.checkedItems.includes("option7")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="TRẦU CAU (ARTIFICIAL)"
                     />
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
-                          value="option4"
-                          checked={formData.checkedItems.includes("option4")}
+                          value="option8"
+                          checked={formData.checkedItems.includes("option8")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="TEA (JASMINE OR OOLONG)"
@@ -291,41 +351,85 @@ function App() {
                 <Grid item xs={6}>
                   <FormControl component="fieldset">
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
                           value="option5"
                           checked={formData.checkedItems.includes("option5")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="BÁNH XU-XÊ"
                     />
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
                           value="option6"
                           checked={formData.checkedItems.includes("option6")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="XÔI TRÁI TIM"
                     />
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
                           value="option7"
                           checked={formData.checkedItems.includes("option7")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="KHAY RƯỢU"
                     />
                     <FormControlLabel
+                      sx={{
+                        "& .MuiTypography-root": { fontSize: "14px" }, // Adjust label font size
+                      }}
                       control={
                         <Checkbox
                           value="option8"
                           checked={formData.checkedItems.includes("option8")}
                           onChange={handleCheckboxChange}
+                          sx={{
+                            "& .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area (unchecked state)
+                            },
+                            "&.Mui-checked .MuiSvgIcon-root": {
+                              color: "#fff", // Color for the checkbox's inner area when checked
+                            },
+                          }}
                         />
                       }
                       label="MÂM QUẢ"
@@ -337,11 +441,12 @@ function App() {
 
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <label>
+                <label style={{ fontSize: "14px" }}>
                   DESCRIBE YOUR EVENT (Are there any additional details you
                   would like us to be aware of?)*{" "}
                 </label>
                 <textarea
+                  rows="5"
                   type="text"
                   name="lastName"
                   value={formData.lastName}
@@ -350,7 +455,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -359,7 +464,10 @@ function App() {
 
             <Grid item xs={12}>
               <FormControl fullWidth>
-                <label>How Did You Hear About Us? * </label>
+                <label style={{ fontSize: "14px" }}>
+                  How Did You Hear About Us?{" "}
+                  <span style={{ color: "#f56c6c" }}>*</span>{" "}
+                </label>
                 <input
                   type="text"
                   name="lastName"
@@ -369,7 +477,7 @@ function App() {
                     padding: "10px",
                     marginTop: "5px",
                     border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     outline: "none",
                   }}
                 />
@@ -383,12 +491,17 @@ function App() {
                 variant="contained"
                 color="primary"
                 sx={{
-                  px: 4,
+                  px: 2,
                   py: 1,
                   backgroundColor: "#e0af4a",
                   color: "black",
                   fontWeight: "bold",
                   mb: 3,
+                  border: "none",
+                  boxShadow: "none",
+                  borderRadius: "6px",
+                  fontSize: "16px",
+                  textTransform: "capitalize",
                 }}
               >
                 Submit
@@ -401,4 +514,4 @@ function App() {
   );
 }
 
-export default App;
+export default BookForm;

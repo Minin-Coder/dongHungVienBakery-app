@@ -114,40 +114,92 @@ function ProductCard(props) {
                     marginBottom: 3,
                     lineHeight: 1.6,
                     marginTop: 4,
-                    fontSize: "16px",
                   }}
                 >
                   {props.detailBody}
                 </Typography>
-                <Typography
-                  variant="p"
-                  component="p"
-                  fontSize={15}
-                  sx={{
-                    fontWeight: "bold",
-                    marginBottom: 2,
-                    lineHeight: 1.6,
-                    marginTop: 4,
-                    fontSize: "16px",
-                  }}
-                >
-                  {props.detailBody2}
-                </Typography>
-                <Typography
-                  variant="p"
-                  component="p"
-                  fontSize={15}
-                  sx={{
-                    fontWeight: "bold",
-                    marginBottom: 2,
-                    marginTop: 3,
-                    fontSize: "16px",
-                  }}
-                >
-                  {props.detailBody3}
-                </Typography>
 
                 <Box sx={{ textAlign: "left" }}>
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: "bold", marginTop: 2, fontSize: "18px" }}
+                  >
+                    {props.detailSubHead1}
+                  </Typography>
+                  <ul style={{ margin: 12, paddingLeft: "20px" }}>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData1}
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData2}
+                      </Typography>
+                    </li>
+                  </ul>
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: "bold", marginTop: 4, fontSize: "18px" }}
+                  >
+                    {props.detailSubHead2}
+                  </Typography>
+                  <ul style={{ margin: 12, paddingLeft: "20px" }}>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData3}
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData4}
+                      </Typography>
+                    </li>
+                  </ul>
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: "bold", marginTop: 4, fontSize: "18px" }}
+                  >
+                    {props.detailSubHead3}
+                  </Typography>
+                  <ul style={{ margin: 12, paddingLeft: "20px" }}>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData5}
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData6}
+                      </Typography>
+                    </li>
+                  </ul>
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: "bold", marginTop: 4, fontSize: "18px" }}
+                  >
+                    {props.detailSubHead4}
+                  </Typography>
+                  <ul style={{ margin: 12, paddingLeft: "20px" }}>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData7}
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography variant="body2" sx={{ fontSize: "16px" }}>
+                        {props.listData8}
+                      </Typography>
+                    </li>
+                  </ul>
+                  <Typography
+                    variant="p"
+                    component="p"
+                    fontSize={15}
+                    sx={{ fontWeight: "bold", marginBottom: 2, marginTop: 3 }}
+                  >
+                    {props.detailBody2}
+                  </Typography>
                   <Box
                     sx={{ borderBottom: "1px solid #fff", marginTop: 4 }}
                   ></Box>

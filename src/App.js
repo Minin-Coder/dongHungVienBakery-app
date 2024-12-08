@@ -3,7 +3,8 @@ import "./App.css";
 // import Home from "./Components/Home/Home";
 // import Contact from "./Components/Contact/Contact";
 // import VeganProtien from "./Components/VeganProtien/VeganProtien";
-import VietnameseTea from "./Components/VietnameseTea/VietnameseTea";
+// import VietnameseTea from "./Components/VietnameseTea/VietnameseTea";
+import Menu from "./Components/Menu/Menu";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <ProductCard /> */}
       {/* <Contact /> */}
       {/* <VeganProtien /> */}
-      <VietnameseTea />
+      {/* <VietnameseTea /> */}
+      <Menu />
     </>
   );
 }
